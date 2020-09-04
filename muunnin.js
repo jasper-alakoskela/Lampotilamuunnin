@@ -4,11 +4,17 @@ calculateBtn.addEventListener("click", function(){
         
     const chooseTemperature = document.getElementById('temperature').value;
     const chooseDecimal = document.querySelector('input[name="decimal"]:checked').value;
-    let input = document.getElementById("input").value;
+    const vastaukset = document.getElementById('vastaukset');
+    let lämpötila = document.getElementById("lämpötila").value;
     
+    vastaus = muunna(lämpötila, chooseTemperature);
+    
+    let li = document.createElement('li');
+    li.appendChild(document.createTextNode(vastaus));
+    vastaukset.appendChild(li);
 
-    vastaus = muunna(input, chooseTemperature);
 
+    //Tämä ei toimi oikein koska vastaus muuttuja on väärin 
     if (chooseDecimal == '1d') {
         console.log(vastaus.toFixed(1));
     }
@@ -20,9 +26,7 @@ calculateBtn.addEventListener("click", function(){
     }
     else {
         console.log(vastaus);
-    }  
-    
-
+    }   
 });
 
 function muunna(x, chooseTemperature) {
@@ -57,4 +61,7 @@ function muunna(x, chooseTemperature) {
     }
 }
 
+
+
+    
 
