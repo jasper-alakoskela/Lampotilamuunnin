@@ -2,9 +2,13 @@ const calculateBtn = document.getElementById("calculate");
 
 calculateBtn.addEventListener("click", function () {
   const chooseTemperature = document.getElementById("temperature").value;
-  const chooseDecimal = document.querySelector('input[name="decimal"]:checked')
-    .value;
+  const chooseDecimal = document.querySelector('input[name="decimal"]:checked').value;
   let lämpötila = document.getElementById("lämpötila").value;
+
+  if (lämpötila == "") {
+    alert("Syötä lämpötila");
+    return ""
+  }
 
   vastaus = muunna(lämpötila, chooseTemperature);
 
@@ -45,8 +49,4 @@ function muunna(x, chooseTemperature) {
   } else {
     return alert("Valitse minkä laskennan haluat toimittaa!");
   }
-}
-
-inputNull(){
-    lämpötila = null;
 }

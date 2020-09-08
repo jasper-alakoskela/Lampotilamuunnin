@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="fi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lämpötilamuunnin</title>
-  </head>
-  <body onload="inputNull()">
-    <h1>Lämpötilamuunnin</h1>
 
-    <select name="temperature" id="temperature">
-      <option value="valitse">Valitse</option>
-      <option value="ctof">Celcius to Fahrenheit</option>
-      <option value="ftoc">Fahrenheit to Celcius</option>
-      <option value="ftok">Fahrenheit to Kelvin</option>
-      <option value="ktof">Kelvin to Fahrenheit</option>
-      <option value="ktoc">Kelvin to Celcius</option>
-      <option value="ctok">Celcius to Kelvin</option>
-    </select>
-    <br />
-    <br />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lämpötilamuunnin</title>
+</head>
 
-    <input id="lämpötila" type="text" placeholder="Syötä lämpötila" />
-    <button id="calculate">Muunna</button> <br />
-    <p id="vastaukset"></p>
+<body>
+  <h1>Lämpötilamuunnin</h1>
 
-    <input type="radio" name="decimal" value="1d" checked />
-    <label for="1d">1 Desimaali</label><br />
-    <input type="radio" name="decimal" value="2d" />
-    <label for="2d">2 Desimaali</label><br />
-    <input type="radio" name="decimal" value="3d" />
-    <label for="3d">3 Desimaali</label><br />
+  <select name="temperature" id="temperature">
+    <option value="valitse">Valitse</option>
+    <option value="ctof">Celcius to Fahrenheit</option>
+    <option value="ftoc">Fahrenheit to Celcius</option>
+    <option value="ftok">Fahrenheit to Kelvin</option>
+    <option value="ktof">Kelvin to Fahrenheit</option>
+    <option value="ktoc">Kelvin to Celcius</option>
+    <option value="ctok">Celcius to Kelvin</option>
+  </select>
+  <br />
+  <br />
 
-    <script src="muunnin.js"></script>
-  </body>
+  <input id="lämpötila" type="text" onfocus="this.value=''" placeholder="Syötä lämpötila" />
+  <button id="calculate">Muunna</button> <br />
+  <p id="vastaukset"></p>
+
+  <input type="radio" name="decimal" value="1d" checked />
+  <label for="1d">1 Desimaali</label><br />
+  <input type="radio" name="decimal" value="2d" />
+  <label for="2d">2 Desimaali</label><br />
+  <input type="radio" name="decimal" value="3d" />
+  <label for="3d">3 Desimaali</label><br />
+
+  <script src="muunnin.js"></script>
+</body>
+
 </html>
